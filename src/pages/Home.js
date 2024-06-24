@@ -2,65 +2,52 @@ import React from 'react';
 import PageTransition from '../components/PageTransition';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import profilePic from '../assets/pp.jpg'
 
 const HeroSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  height: 40rem;
   background: ${({ theme }) => theme.heroBg};
 `;
 
 const ProfilePic = styled(motion.img)`
-  width: 150px;
-  height: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  margin-right: 4rem;
+  margin-left: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
 const HeroText = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  display: inline-block;
   color: ${({ theme }) => theme.heroText};
-`;
-
-const CTAButton = styled(motion.a)`
-  padding: 0.75rem 1.5rem;
-  background: ${({ theme }) => theme.buttonBg};
-  color: ${({ theme }) => theme.buttonText};
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-
-  &:hover {
-    background: ${({ theme }) => theme.buttonHoverBg};
-  }
 `;
 
 const Home = () => {
   return (
     <PageTransition>
       <HeroSection>
-        <ProfilePic
-          src="/path/to/profile-pic.jpg"
-          alt="Profile Picture"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        />
-        <HeroText>Hello, I'm a Software Engineer</HeroText>
-        <CTAButton
-          href="/cv"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          View My CV
-        </CTAButton>
+        <div>
+          <ProfilePic
+            src={profilePic}
+            alt="Profile Picture"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          />
+          <h2>Hello,</h2>
+          <h3>I am Dipesh Baral, A software Engineer.</h3>
+        </div>
+        <div id="about-text">
+          <HeroText>About</HeroText>
+        </div>
       </HeroSection>
     </PageTransition>
   );

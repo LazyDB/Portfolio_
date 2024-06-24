@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     transition: all 0.50s linear;
     margin: 0;
     padding: 0;

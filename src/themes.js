@@ -1,10 +1,10 @@
 export const lightTheme = {
-  body: '#FFF',
-  text: '#000',
-  toggleBorder: '#FFF',
-  background: '#FFF',
-  navbarBg: '#e3e3e3',
-  navbarText: '#000',
+  body: '#AFDDE5',
+  text: '#024950',
+  toggleBorder: '#AFDDE5',
+  background: '#AFDDE5',
+  navbarBg: '#0FA4AF',
+  navbarText: '#024950',
   navbarHoverText: '#555',
 };
 

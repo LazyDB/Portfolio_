@@ -43,9 +43,9 @@ const Header = ({ toggleTheme, theme }) => {
     <Nav>
       <div>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/cv">CV</NavLink>
         <NavLink to="/projects">Projects</NavLink>
         <NavLink to="/logos-art">Logos & Art</NavLink>
+        <NavLink to="/cv">CV</NavLink>
         <NavLink to="/contact-me">Contact Me</NavLink>
       </div>
       <ToggleButton onClick={toggleTheme}>
